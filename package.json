@@ -8,6 +8,7 @@
   },
   "author": "Antti Kosonen <antti.kosonen@futurice.com> (http://spiceprogram.org)",
   "license": "MIT",
+  "repository": "omjokine/frominto_fi",
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.0.2"
