@@ -1,5 +1,5 @@
-/* 
- The ruleset is an array of [[endings], offset, from, in, to] 
+/*
+ The ruleset is an array of [[endings], offset, from, in, to]
  where the MOST SIGNIFICANT MATCH is the latest.
 */
 const ruleset = [
@@ -12,7 +12,7 @@ const ruleset = [
     [['y'], 0 , 'stä', 'ssä' , 'yn'],
     [['ä'], 0 , 'stä', 'ssä' , 'än'],
     [['ö'], 0 , 'stä', 'ssä' , 'ön'],
-    
+
     //-ri -erityiset: pori, meri etc. + kajaani yms
     [['pori', 'uri', 'ari', 'ani'], 0, 'sta', 'ssa', 'in'],
     [['meri','veri'], -1, 'essä', 'estä', 'ereen'],
@@ -30,7 +30,7 @@ const ruleset = [
 
     //naantali et al
     [['ali', 'oli', 'uli', 'nti', 'nni'], 0, 'sta', 'ssa', 'in'],
-    
+
     //-valta etc.
     [['lta'], -2, 'lasta', 'lassa', 'taan'],
     //-he, like Raahe
@@ -62,7 +62,7 @@ const ruleset = [
     [['vik'], 0, 'istä', 'issä', 'iin'],
     //mm. savio
     [['vio'], 0, 'lta', 'lla', 'lle'],
-    
+
     //inkeroinen, kauniainen, änkeröinen, kimpeläinen yms.
     [['inen'], -4, 'isista', 'isissa', 'isiin' ],
     [['äinen', 'öinen'], -4, 'isistä', 'isissä', 'isiin' ],
@@ -84,7 +84,7 @@ const ruleset = [
 
     //saaret + erikoissaaret
     [['saari'], -1, 'esta', 'essa', 'een' ],
-    
+
     //lahdet + erikoislahdet
     [['lahti'], -2, 'desta', 'dessa', 'teen'],
     [['kesälahti', 'talvilahti','lapinlahti'], -2, 'delta', 'della', 'delle'],
@@ -94,25 +94,25 @@ const ruleset = [
     [['laajavuori', 'punavuori'], -1, 'esta', 'essa', 'een'],
     //joet
     [['joki'], -4, 'joelta', 'joella', 'joelle' ],
-    
+
     //mäet
     [['mäki'], -4, 'mäeltä', 'mäellä', 'mäelle' ],
     [['tunturi'], 0, 'lta', 'lla', 'lle' ],
     //erikoismäet
     [['kannelmäki', 'pukinmäki', 'myyrmäki'], -2, 'estä', 'essä', 'keen' ],
-    
+
     //asemat, hotellit ja muut
-    [['asema'], 0, 'lta', 'lla', 'lle'],  
-    [['otelli'], 0, 'sta', 'ssa', 'in'],  
-    [['hovi'], 0, 'sta', 'ssa', 'in'],  
+    [['asema'], 0, 'lta', 'lla', 'lle'],
+    [['otelli'], 0, 'sta', 'ssa', 'in'],
+    [['hovi'], 0, 'sta', 'ssa', 'in'],
 
     //-selkä
-    [['selkä'], -2, 'ältä', 'ällä', 'älle'],  
-    
+    [['selkä'], -2, 'ältä', 'ällä', 'älle'],
+
     //-etti, tough one (taavetti, retretti)
-    [['tti'], -2, 'ista', 'issa', 'tiin'],  
-    [['kki'], -2, 'ista', 'issa', 'kiin'],  
-    [['retti', 'pirtti'], -2, 'istä', 'issä', 'tiin'],  
+    [['tti'], -2, 'ista', 'issa', 'tiin'],
+    [['kki'], -2, 'ista', 'issa', 'kiin'],
+    [['retti', 'pirtti'], -2, 'istä', 'issä', 'tiin'],
 
     //tuntureiden nimet
     [['Suomu', 'Ruka', 'Tahko', 'Luosto', 'Malmi'], 0, 'lta', 'lla', 'lle'],
@@ -122,14 +122,15 @@ const ruleset = [
     [['Kangasala'], -3, 'alta', 'alla', 'alle'],
     // Helsinki Lentoasema, Turenki Lentoasema (if such exists)
     [['nki Lentoasema'], -14, 'ngin Lentoasemalta', 'ngin Lentoasemalla', 'ngin Lentoasemalle'],
-    
 
+    // Turenki
+    [['Turenki'], -2, 'gista', 'gissa', 'kiin']
 ];
 
 function getLastMatch(city) {
   return ruleset
       .filter(rule => (
-        rule[0].filter((ending) => 
+        rule[0].filter((ending) =>
           (city.toUpperCase().endsWith(ending.toUpperCase()))
         ).length))
       .map((match) => ({

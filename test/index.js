@@ -74,15 +74,15 @@ const testdata = [
     ['Uimaharju', 'Uimaharjusta', 'Uimaharjussa', 'Uimaharjuun'], // src: http://www.uimaharju.fi/
     ['Hyvinkää', 'Hyvinkäältä', 'Hyvinkäällä', 'Hyvinkäälle'],
     ['Luosto', 'Luostolta', 'Luostolla', 'Luostolle'], // luosto.fi
-    ['XY Motelli', 'XY Motellista', 'XY Motellissa', 'XY Motelliin'], 
+    ['XY Motelli', 'XY Motellista', 'XY Motellissa', 'XY Motelliin'],
     ['Raahe', 'Raahesta', 'Raahessa', 'Raaheen'], // luosto.fi
-    ['Ruka', 'Rukalta', 'Rukalla', 'Rukalle'], 
-    ['Pyhä', 'Pyhältä', 'Pyhällä', 'Pyhälle'], 
-    ['Kiuruvesi', 'Kiuruvedeltä', 'Kiuruvedellä', 'Kiuruvedelle'], 
-    ['Karjaa', 'Karjaalta', 'Karjaalla', 'Karjaalle'], // www.raasepori.fi 
-    ['Pukinmäki', 'Pukinmäestä', 'Pukinmäessä', 'Pukinmäkeen'], // www.raasepori.fi 
-    ['Dragsvik', 'Dragsvikistä', 'Dragsvikissä', 'Dragsvikiin'], // https://fi.wikipedia.org/wiki/Uudenmaan_prikaati 
-    ['Runni', 'Runnista', 'Runnissa', 'Runniin'], 
+    ['Ruka', 'Rukalta', 'Rukalla', 'Rukalle'],
+    ['Pyhä', 'Pyhältä', 'Pyhällä', 'Pyhälle'],
+    ['Kiuruvesi', 'Kiuruvedeltä', 'Kiuruvedellä', 'Kiuruvedelle'],
+    ['Karjaa', 'Karjaalta', 'Karjaalla', 'Karjaalle'], // www.raasepori.fi
+    ['Pukinmäki', 'Pukinmäestä', 'Pukinmäessä', 'Pukinmäkeen'], // www.raasepori.fi
+    ['Dragsvik', 'Dragsvikistä', 'Dragsvikissä', 'Dragsvikiin'], // https://fi.wikipedia.org/wiki/Uudenmaan_prikaati
+    ['Runni', 'Runnista', 'Runnissa', 'Runniin'],
     ['Keuruu', 'Keuruulta', 'Keuruulla', 'Keuruulle'],
     ['Pihlajavesi', 'Pihlajavedeltä', 'Pihlajavedellä', 'Pihlajavedelle'],
     ['Saariselkä', 'Saariselältä', 'Saariselällä', 'Saariselälle'],
@@ -106,12 +106,14 @@ const testdata = [
     ['Myyrmäki', 'Myyrmäestä', 'Myyrmäessä', 'Myyrmäkeen'],
     //this is ugly, but Helsinki Lentoasema is really called Helsinki Lentoasema
     ['Helsinki Lentoasema', 'Helsingin Lentoasemalta', 'Helsingin Lentoasemalla', 'Helsingin Lentoasemalle'],
-    
+
     ['XY-Tunturi', 'XY-Tunturilta', 'XY-Tunturilla', 'XY-Tunturille'],
-    ['XY Motelli', 'XY Motellista', 'XY Motellissa', 'XY Motelliin'], 
+    ['XY Motelli', 'XY Motellista', 'XY Motellissa', 'XY Motelliin'],
     ['XY-Tunturi', 'XY-Tunturilta', 'XY-Tunturilla', 'XY-Tunturille'],
 
     ['XYZ', 'XYZ', 'XYZ', 'XYZ'],
+
+    ['Turenki', 'Turengista', 'Turengissa', 'Turenkiin'],
 ];
 
 
